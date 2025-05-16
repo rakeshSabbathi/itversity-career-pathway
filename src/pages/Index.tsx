@@ -17,14 +17,24 @@ const Index = () => {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <Features />
-        <ProgramTracks />
+        <section id="features">
+          <Features />
+        </section>
+        <section id="tracks">
+          <ProgramTracks />
+        </section>
+        <section id="learning-format">
+          <h2>Learning Format</h2>
+          <p>Details about the learning format.</p>
+        </section>
         <Statistics />
         <Curriculum />
         <Learning />
         <Testimonials />
         <CTA />
-        <FAQ />
+        <section id="faq">
+          <FAQ />
+        </section>
       </main>
       <Footer />
     </div>
