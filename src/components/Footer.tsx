@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-itv-light-grey text-sm">
-          <p>&copy; {new Date().getFullYear()} ITVersity. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ITVersity, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
@@ -14,9 +13,9 @@ const ProgramTracks = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex justify-center items-center space-x-4">
           {/* Skill Track */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-itv-light-grey">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-itv-light-grey flex-shrink-0 w-80">
             <div className="p-6 border-b border-itv-light-grey">
               <h3 className="text-xl font-bold mb-2">Skill Track</h3>
               <div className="flex items-end mb-4">
@@ -62,11 +61,11 @@ const ProgramTracks = () => {
             </div>
           </div>
 
+          {/* Plus Icon */}
+          <div className="flex items-center justify-center text-itv-red text-4xl flex-shrink-0">+</div>
+
           {/* Career Track */}
-          <div className="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-itv-red transform md:scale-105 relative">
-            <div className="absolute top-0 right-0 bg-itv-red text-white text-xs font-bold py-1 px-3 rounded-bl">
-              POPULAR
-            </div>
+          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-itv-light-grey flex-shrink-0 w-80">
             <div className="p-6 border-b border-itv-light-grey">
               <h3 className="text-xl font-bold mb-2">Career Track</h3>
               <div className="flex items-end mb-4">
@@ -91,6 +90,10 @@ const ProgramTracks = () => {
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-itv-red mr-2 mt-0.5" />
+                  <span>Real-World Case Studies</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-itv-red mr-2 mt-0.5" />
                   <span>Resume/Profile Building</span>
                 </li>
                 <li className="flex items-start">
@@ -102,14 +105,20 @@ const ProgramTracks = () => {
                   <span>Placement Assistance</span>
                 </li>
               </ul>
-              <Button className="w-full mt-6 bg-itv-red hover:bg-itv-red/90">
+              <Button variant="outline" className="w-full mt-6 border-itv-red text-itv-red hover:bg-itv-red hover:text-white">
                 Enroll Now
               </Button>
             </div>
           </div>
 
+          {/* Equal Icon */}
+          <div className="flex items-center justify-center text-itv-red text-4xl flex-shrink-0">=</div>
+
           {/* Full Program */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden border border-itv-light-grey">
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden border-2 border-itv-red transform md:scale-105 translate-x-2 relative flex-shrink-0">
+            <div className="absolute top-0 right-0 bg-itv-red text-white text-xs font-bold py-1 px-3 rounded-bl">
+              POPULAR
+            </div>
             <div className="p-6 border-b border-itv-light-grey">
               <h3 className="text-xl font-bold mb-2">Full Program</h3>
               <div className="flex items-end mb-4">
@@ -138,6 +147,10 @@ const ProgramTracks = () => {
                 </li>
                 <li className="flex items-start">
                   <Check className="h-5 w-5 text-itv-red mr-2 mt-0.5" />
+                  <span>Career Prep</span>
+                </li>
+                <li className="flex items-start">
+                  <Check className="h-5 w-5 text-itv-red mr-2 mt-0.5" />
                   <span>Priority Job Referrals</span>
                 </li>
                 <li className="flex items-start">
@@ -145,7 +158,7 @@ const ProgramTracks = () => {
                   <span>Lifetime Access to Updates</span>
                 </li>
               </ul>
-              <Button variant="outline" className="w-full mt-6 border-itv-red text-itv-red hover:bg-itv-red hover:text-white">
+              <Button className="w-full mt-6 bg-itv-red hover:bg-itv-red/90">
                 Enroll Now
               </Button>
             </div>

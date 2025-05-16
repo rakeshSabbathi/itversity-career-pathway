@@ -1,12 +1,13 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,41 +20,32 @@ const Hero = () => {
     setPhone('');
   };
 
+  const handleApplyNow = () => {
+    navigate('/signup');
+  };
+
   return (
     <section className="bg-gradient-to-b from-white to-itv-light-grey">
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
-            <h1 className="heading-xl text-itv-dark-grey">
-              Become a Data Engineer in as Little as <span className="text-itv-red">3 Months</span>
+            <h1 className="heading-xl text-itv-dark-grey" style={{ lineHeight: '48px' }}>
+              Launch your career as a <br /> top-tier Data Engineer in just
+              <span className="text-itv-red" style={{ lineHeight: '55px' }}> 3 Months</span>
             </h1>
             <p className="text-lg text-itv-neutral-grey">
-              Master data engineering with industry-relevant skills, hands-on projects, and job placement support. Online and offline options available.
+            No coding experience? No problem. We'll train you from the ground up to become a job-ready professional.
             </p>
             <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
-              <div className="grid grid-cols-1 gap-4">
-                <Input
-                  placeholder="Your email"
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="h-12"
-                />
-                <Input
-                  placeholder="Your phone number" 
-                  type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="h-12"
-                />
-                <Button type="submit" size="lg" className="w-full bg-itv-red hover:bg-itv-red/90 h-12 text-base font-medium">
-                  Schedule Your Free Demo Call
-                </Button>
-              </div>
-              <p className="text-xs text-itv-neutral-grey text-center">
-                By submitting, you agree to receive communications from ITVersity.
-              </p>
             </form>
+          <div className="flex gap-4">
+            <Button variant="default" className="bg-itv-red hover:bg-itv-red/90" onClick={handleApplyNow}>
+              Apply Now
+            </Button>
+            <Button variant="outline" className="border-itv-red text-itv-red hover:bg-itv-red/10">
+              Download Brochure
+            </Button>
+          </div>
           </div>
           <div className="relative hidden md:block animate-fade-in">
             <div className="aspect-video rounded-lg overflow-hidden shadow-xl">
@@ -62,10 +54,6 @@ const Hero = () => {
                 alt="Data Engineering Program" 
                 className="w-full h-full object-cover"
               />
-            </div>
-            <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-lg shadow-lg">
-              <p className="font-bold text-itv-red">1000+ Successful Students</p>
-              <p className="text-sm text-itv-neutral-grey">Join our growing community</p>
             </div>
           </div>
         </div>
